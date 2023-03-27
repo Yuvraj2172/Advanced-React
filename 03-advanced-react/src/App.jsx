@@ -1,4 +1,4 @@
-import Starter from './tutorial/01-useState/starter/04-useState-object'
+import Starter from './tutorial/01-useState/starter/05-useState-gotcha'
 import Final from './tutorial/01-useState/final/03-useState-array';
 
 function App() {
