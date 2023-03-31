@@ -17,7 +17,7 @@ const MultipleReturnsFetchData = () => {
         }
         const user = await response.json();
         setUser(user);
-        console.log(response);
+        // console.log(rse);
       } catch (error) {
         setIsError(true);
         console.log(error);
@@ -32,12 +32,13 @@ const MultipleReturnsFetchData = () => {
   if(isError){
     return <h2>Error...</h2>
   }
-  // const [id , avatar_url , login] = user;
-  return <div key={user.id}>
-    <img src={user.avatar_url}  style={{width:`150px`, borderRadius:`25px`}} alt={user.name}/>
-    <h2>Name : {user.name}</h2>
-    <h4>Works at : {user.company}</h4>
-    <p>Bio : {user.bio}</p>
+  
+  const {id , avatar_url , name, bio , company} = user;
+  return <div key={id}>
+    <img src={avatar_url}  style={{width:`150px`, borderRadius:`25px`}} alt={name}/>
+    <h2>Name : {name}</h2>
+    <h4>Works at : {company}</h4>
+    <p>Bio : {bio}</p>
   </div>
 };
 export default MultipleReturnsFetchData;
