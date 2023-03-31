@@ -44,7 +44,7 @@ const FetchData = () => {
             <img src={avatar_url} alt={login} style={{width:'50px'}} />
             <div>
               <h5>{login}</h5>
-              <a href={html_url}>profile</a>
+              <a href={html_url} target="_blank" rel = "noreffer">profile</a>
             </div>
           </li>
         )
