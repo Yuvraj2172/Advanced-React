@@ -6,14 +6,14 @@ const Example = () => {
     // won't work
     const [state, setState] = useState(false);
   }
-
-  // if (condition) {
-  //   return <h2>Hello There</h2>;
-  // }
+  
+  if (condition) {
+    return <h2>Hello There</h2>;
+  }
+  useEffect(() => {
+    console.log('hello there');
+  }, []);
   // // this will also fail
-  // useEffect(() => {
-  //   console.log('hello there');
-  // }, []);
   return <h2>example</h2>;
 };
 

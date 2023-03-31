@@ -1,4 +1,4 @@
-import Starter from './tutorial/03-conditional-rendering/starter/02-multiple-returns-fetch-data';
+import Starter from './tutorial/03-conditional-rendering/starter/03-hooks-rule';
 import Final from './tutorial/03-conditional-rendering/final/01-multiple-returns-basics'
 
 function App() {
