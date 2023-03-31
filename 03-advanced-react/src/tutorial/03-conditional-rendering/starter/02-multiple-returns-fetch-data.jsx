@@ -1,7 +1,22 @@
-import { useEffect, useState } from 'react';
-const url = 'https://api.github.com/users/QuincyLarson';
+import { useEffect, useState } from "react";
+const url = "https://api.github.com/users/QuincyLarson";
 
 const MultipleReturnsFetchData = () => {
-  return <h2>Fetch Data </h2>;
+  const [user, setUser] = useState(null);
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const response = await fetch(url);
+        const user = await response.json();
+        setUser(user);
+        console.log(user);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchUser();
+  }, []);
+
+  return <></>;
 };
 export default MultipleReturnsFetchData;
