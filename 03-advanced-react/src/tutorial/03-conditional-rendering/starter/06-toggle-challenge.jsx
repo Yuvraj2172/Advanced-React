@@ -4,7 +4,8 @@ const ToggleChallenge = () => {
   const [value, setValue] = useState(false);
   const changeState=()=>{
     setValue(!value);
-    console.log(value)
+    // console.log(value)
+    return;
   }
   return (
     <div>
@@ -15,7 +16,7 @@ const ToggleChallenge = () => {
 };
 
   const ShowAlert=({name})=>{
-    console.log(name)
+    // console.log(name)
     return (
       <>
       <h2>Conditionally Rendered Component</h2>
