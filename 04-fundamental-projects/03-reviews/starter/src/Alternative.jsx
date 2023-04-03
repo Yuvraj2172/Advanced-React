@@ -21,7 +21,7 @@ const App = () => {
       const newIndex = currentIndex + 1;
       let fNumber = newIndex % people.length;
       setIndex(fNumber);
-      console.log(fNumber);
+    //   console.log(fNumber);
       return fNumber;
     });
   };
@@ -30,7 +30,7 @@ const App = () => {
       const newIndex = currentIndex + 1;
       let fNumber = newIndex % people.length;
       setIndex(fNumber);
-      console.log(fNumber);
+    //   console.log(fNumber);
       return fNumber;
     });
   };
