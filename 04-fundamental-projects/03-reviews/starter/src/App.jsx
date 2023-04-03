@@ -7,6 +7,14 @@ const App = () => {
   const { name, job, image, text } = people[index];
   // console.log(name);
 
+  const randomPerson = () => {
+    let randomNumber = Math.trunc(Math.random() * people.length);
+    if (randomNumber === index) {
+      randomNumber = index + 1;
+    }
+    setIndex(checkNumber(randomNumber));
+  };
+
   const checkNumber = (number) => {
     if (number > people.length - 1) {
       return 0;
@@ -49,6 +57,9 @@ const App = () => {
             <FaChevronRight />
           </button>
         </div>
+        <button className="btn btn-hipster" onClick={randomPerson}>
+          surprise me!
+        </button>
       </article>
     </main>
   );
