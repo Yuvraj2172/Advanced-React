@@ -1,3 +1,4 @@
+import { Person } from './Person';
 import { people } from "../../../data";
 import React from 'react'
 
@@ -6,9 +7,10 @@ const List = () => {
     <div>
       {people.map((p)=>{
         return(
-            <h4>{p.name}</h4>
+           <Person key={p.id} {...p}     />
         )
       })}
+      
     </div>
   )
 }
