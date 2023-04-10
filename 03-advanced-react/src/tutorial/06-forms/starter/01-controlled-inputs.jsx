@@ -3,7 +3,6 @@ import { React,useState } from "react";
 const ControlledInputs = () => {
   const [name , setName]=useState('');
   const [email, setEmail] = useState('');
-  const [submit, setSubmit] = useState(false);
 
   const handleSubmit=(e)=>{
     e.preventDefault();
