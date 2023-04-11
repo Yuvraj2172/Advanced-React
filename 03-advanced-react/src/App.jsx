@@ -5,7 +5,8 @@
 
 // import ControlledInputs from "./tutorial/06-forms/starter/01-controlled-inputs";
 // import List from "./tutorial/05-leverage-javascript/starter/List";
-import MultipleInputs from "./tutorial/06-forms/starter/03-multiple-inputs";
+// import MultipleInputs from "./tutorial/06-forms/starter/03-multiple-inputs";
+import Starter from "./tutorial/06-forms/starter/05-form-data";
 import React from "react";
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
     <div className='container'>
      {/* <UserChallenge/> */}
      {/* <ControlledInputs/> */}
-     <MultipleInputs/>
+     {/* <MultipleInputs/> */}
+     <Starter/>
     </div>
   );
 }
