@@ -3,15 +3,17 @@
 // import Navbar from './tutorial/04-project-structure/starter/Navbar.jsx'
 // import './tutorial/04-project-structure/starter/Navbar.css';
 
-import ControlledInputs from "./tutorial/06-forms/starter/01-controlled-inputs";
+// import ControlledInputs from "./tutorial/06-forms/starter/01-controlled-inputs";
 // import List from "./tutorial/05-leverage-javascript/starter/List";
-import UserChallenge from "./tutorial/06-forms/starter/02-user-challenge";
+import MultipleInputs from "./tutorial/06-forms/starter/03-multiple-inputs";
+import React from "react";
+
 function App() {
   return (
     <div className='container'>
      {/* <UserChallenge/> */}
      {/* <ControlledInputs/> */}
-     <UserChallenge/>
+     <MultipleInputs/>
     </div>
   );
 }
