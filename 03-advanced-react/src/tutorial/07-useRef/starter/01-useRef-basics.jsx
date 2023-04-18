@@ -3,18 +3,28 @@ import { useEffect, useRef, useState } from 'react';
 const UseRefBasics = () => {
   const [value, setValue] = useState(0);
   const refContainer = useRef(null);
-  console.log(refContainer);
+  const isMounted = useRef(false);
+   
+  useEffect(()=>{
+    refContainer.current.focus();
+  });
 
-  // useEffect(()=>{
-  //   console.log(refContainer);
-  // })
-
+  
+  // console.log(refContainer);
+  useEffect(()=>{
+    if(!isMounted){
+      isMounted.current = true;
+      return;
+    }
+    console.log('re-render');
+  },[value])
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const name = refContainer.current.value;
     console.log(name);
   };
-
+ 
   return (
     <div>
       <form className='form' onSubmit={handleSubmit}>
