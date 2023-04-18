@@ -6,10 +6,10 @@ function App() {
   const [questions, setQuestions] = useState(data);
   const [activeId, setActiveId] = useState(null);
 
-  const toggleQuestion = (id) => {
-    const newActiveId = id === activeId ? null : id;
+  const toggleQuestion=(id)=>{
+    const newActiveId = id===activeId ? null : id;
     setActiveId(newActiveId);
-  };
+  }
 
   return (
     <main>
