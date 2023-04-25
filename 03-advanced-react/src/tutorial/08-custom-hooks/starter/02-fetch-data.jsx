@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import useFetch from './useFetch';
+import useFetchGeneric from "./useFetchGeneric";
 const url = "https://api.github.com/users/QuincyLarson";
 
 const FetchData = () => {
@@ -7,7 +7,7 @@ const FetchData = () => {
   // const { isLoading, isError, user } = useFetch(url);
   // order matters
   // don't place user JSX before loading or error
-  const {isLoading , isError, user} = useFetch(url);
+  const {isLoading , isError, data : user} = useFetchGeneric(url);
   if (isLoading) {
     return <h2>Loading...</h2>;
   }
