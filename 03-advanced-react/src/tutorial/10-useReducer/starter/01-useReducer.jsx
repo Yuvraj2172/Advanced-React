@@ -2,9 +2,16 @@ import {React , useStatte , useReducer} from "react";
 import { data } from "../../../data";
 const defaultState = {
   people : data,
+  isLoading : false,
 }
-const reducer = ()=>{
-
+const reducer = (state, action)=>{
+  if(action.type === 'CLEAR LIST'){
+    return {...state,people: [], isLoading: false}
+  }
+  if(action.type === 'REMOVE ITEM'){
+    return {...state, people : data, isLoading: true}
+  }
+  
 }
 const ReducerBasics = () => {
 
@@ -13,11 +20,13 @@ const ReducerBasics = () => {
   
 
   const removeItem = (id) => {
+    dispatch({type : 'REMOVE ITEM'});
     // let newPeople = people.filter((person) => person.id !== id);
     // setPeople(newPeople);
   };
 
   const clearList = () => {
+    dispatch({type : 'CLEAR LIST'});
     // setPeople([]);
   };
 
