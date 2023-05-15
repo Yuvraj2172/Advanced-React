@@ -5,6 +5,7 @@ import List from './List';
 const LowerStateChallenge = () => {
   const [people, setPeople] = useState(data);
 
+  
 
   
   const addPerson = (name) => {
